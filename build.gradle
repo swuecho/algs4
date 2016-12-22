@@ -12,3 +12,20 @@ repositories {
     mavenCentral()
 }
 // end::repositories[]
+
+task hello {
+    doLast {
+        println("heoo;")
+    }
+}
+
+
+task groovy {
+    doLast {
+        def a = 5
+        println "a = $a"
+    }
+}
+
+
+
