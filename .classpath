@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/echo/Dropbox/bioinfo/javalib/stdlib.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/echo/Dropbox/bioinfo/javalib/algs4.jar"/>
+	<classpathentry kind="lib" path="/home/hwu/Dropbox/java/lib/algs4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
