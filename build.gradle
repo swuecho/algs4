@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'application'
+defaultTasks "run"
 
 mainClassName = 'first'
 
@@ -12,6 +13,9 @@ repositories {
     mavenCentral()
 }
 // end::repositories[]
+dependencies {
+    compile(group: 'com.shekhargulati', name: 'strman', version: '0.2.0')
+}
 
 task hello {
     doLast {
