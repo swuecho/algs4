@@ -1,11 +1,15 @@
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'application'
-defaultTasks "run"
 
-mainClassName = 'first'
+startScripts.enabled = false
+run.enabled = false
+
+defaultTasks "run"
 
 dependencies {
     compile files('libs/algs4.jar')
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'  
 }
 
 // tag::repositories[]
@@ -17,19 +21,43 @@ dependencies {
     compile(group: 'com.shekhargulati', name: 'strman', version: '0.2.0')
 }
 
+// Creates scripts for entry points
+// Subproject must apply application plugin to be able to call this method.
+def createScript(project, mainClass, name) {
+  project.tasks.create(name: name, type: CreateStartScripts) {
+    outputDir       = new File(project.buildDir, 'scripts')
+    mainClassName   = mainClass
+    applicationName = name
+    classpath       = project.tasks[JavaPlugin.JAR_TASK_NAME].outputs.files + project.configurations.runtime
+  }
+  project.tasks[name].dependsOn(project.jar)
+
+  project.applicationDistribution.with {
+    into("bin") {
+      from(project.tasks[name])
+      fileMode = 0755
+    }
+  }
+}
+
+
+// The next two lines disable the tasks for the primary main which by default
+// generates a script with a name matching the project name. 
+// You can leave them enabled but if so you'll need to define mainClassName
+// And you'll be creating your application scripts two different ways which 
+// could lead to confusion
+startScripts.enabled = false
+run.enabled = false
+
+// Call this for each Main class you want to expose with an app script
+createScript(project, 'first', 'first')
+
 task hello {
     doLast {
         println("heoo;")
     }
 }
 
-
-task groovy {
-    doLast {
-        def a = 5
-        println "a = $a"
-    }
-}
 
 
 
