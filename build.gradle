@@ -2,10 +2,9 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'application'
 
-startScripts.enabled = false
-run.enabled = false
-
 defaultTasks "run"
+
+mainClassName = 'first'
 
 dependencies {
     compile files('libs/algs4.jar')
@@ -46,11 +45,12 @@ def createScript(project, mainClass, name) {
 // You can leave them enabled but if so you'll need to define mainClassName
 // And you'll be creating your application scripts two different ways which 
 // could lead to confusion
-startScripts.enabled = false
-run.enabled = false
+//startScripts.enabled = false
+//run.enabled = false
 
 // Call this for each Main class you want to expose with an app script
 createScript(project, 'first', 'first')
+createScript(project, 'play', 'play')
 
 task hello {
     doLast {
