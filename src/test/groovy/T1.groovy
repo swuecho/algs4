@@ -8,4 +8,9 @@ class T1 extends GroovyTestCase {
         def lst = [1, 2]
         assert 2 == lst.size(): "ArrayList size must be 2"
     }
+
+    void testSetSize() {
+        Set possible_dna = ['A', 'T', 'C', 'G']
+        assert 4 ==  possible_dna.size(): "Set size is 4"
+    }
 }

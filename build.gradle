@@ -16,6 +16,7 @@ dependencies {
     compile(group: 'org.postgresql', name: 'postgresql', version: '42.0.0')
     compile(group: 'org.biojava', name: 'biojava-genome', version: '4.2.0')
     compile 'com.github.lwhite1:tablesaw:0.7.7.3'
+    compile 'org.codehaus.gpars:gpars:1.2.0'
     compile 'org.codehaus.groovy:groovy-all:2.4.10'
     testCompile 'junit:junit:4.10' // have to give this
 }

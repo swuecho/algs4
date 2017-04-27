@@ -23,6 +23,7 @@
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-genome:4.2.0" level="project" />
     <orderEntry type="library" name="Gradle: com.github.lwhite1:tablesaw:0.7.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.gpars:gpars:1.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.10" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-core:4.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-alignment:4.2.0" level="project" />
@@ -30,6 +31,8 @@
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.multiverse:multiverse-core:0.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.jsr166-mirror:jsr166y:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava.thirdparty:forester:1.038" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-phylo:4.2.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.5" level="project" />
