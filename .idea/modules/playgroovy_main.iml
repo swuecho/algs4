@@ -19,10 +19,11 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.10" level="project" />
     <orderEntry type="library" name="Gradle: com.shekhargulati:strman:0.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-genome:4.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.lwhite1:tablesaw:0.7.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.10" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-core:4.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.biojava:biojava-alignment:4.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.14" level="project" />

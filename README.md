@@ -2,8 +2,6 @@
 
 gradle run
 
-
-
 ## generate runnable scripts
     gradle :distZip
 

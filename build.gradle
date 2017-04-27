@@ -2,14 +2,8 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'application'
 
-defaultTasks "run"
-
+defaultTasks "test"
 mainClassName = 'bio'
-
-dependencies {
-    compile files('libs/algs4.jar')
-    compile 'org.codehaus.groovy:groovy-all:2.4.10'  
-}
 
 // tag::repositories[]
 repositories {
@@ -17,9 +11,14 @@ repositories {
 }
 // end::repositories[]
 dependencies {
+    compile files('libs/algs4.jar')
     compile(group: 'com.shekhargulati', name: 'strman', version: '0.2.0')
     compile(group: 'org.postgresql', name: 'postgresql', version: '42.0.0')
     compile(group: 'org.biojava', name: 'biojava-genome', version: '4.2.0')
+    compile 'com.github.lwhite1:tablesaw:0.7.7.3'
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.10'
+    testCompile 'junit:junit:4.10' // have to give this
 }
 
 // Creates scripts for entry points
@@ -59,7 +58,13 @@ task hello {
         println("heoo;")
     }
 }
-
+// TODO: this does not work yet
+test {
+    testLogging {
+        // Show that tests are run in the command-line output
+        events 'started', 'passed'
+    }
+}
 
 
 

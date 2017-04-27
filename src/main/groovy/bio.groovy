@@ -3,9 +3,9 @@ import org.biojava.nbio.core.sequence.DNASequence
 
 def p = IUPACParser.getInstance()
 
-p.getTables().each {
-    println it.getName()
-}
+// p.getTables().each {
+  //  println it.getName()
+//}
 
 def dna = new DNASequence("ATCG")
 
