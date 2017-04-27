@@ -10,6 +10,10 @@ p.getTables().each {
 def dna = new DNASequence("ATCG")
 
 println dna.getReverseComplement().getSequenceAsString()
-println dna.sequenceScore
+
+println dna.getReverseComplement().getSequenceAsString()
+println dna.getRNASequence().getSequenceAsString()
+
+
 
 

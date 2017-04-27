@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.biojava:biojava-core:4.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.biojava/biojava-core/4.2.0/a0713c21c575f39adc88985acc9cf37715324dab/biojava-core-4.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.biojava/biojava-core/4.2.0/95face29ef232c6abd18d633614c19c9e1b1b1b4/biojava-core-4.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
