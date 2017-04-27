@@ -4,7 +4,7 @@ apply plugin: 'application'
 
 defaultTasks "run"
 
-mainClassName = 'sqlplay'
+mainClassName = 'bio'
 
 dependencies {
     compile files('libs/algs4.jar')
@@ -19,6 +19,7 @@ repositories {
 dependencies {
     compile(group: 'com.shekhargulati', name: 'strman', version: '0.2.0')
     compile(group: 'org.postgresql', name: 'postgresql', version: '42.0.0')
+    compile(group: 'org.biojava', name: 'biojava-genome', version: '4.2.0')
 }
 
 // Creates scripts for entry points
