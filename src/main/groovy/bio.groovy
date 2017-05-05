@@ -8,7 +8,6 @@ FastqReader reader = new SangerFastqReader()
 
 filename = "/home/hwu/dev/MS/UMI/UMI-H_S1_L001/merged/merged_R12.fastq"
 
-def i = 1
 reader.read(new File(filename)).take(5).each {
    // println(it.description.split(/:/)[-1])
      def seq = it.sequence
@@ -25,6 +24,7 @@ def seq_number_each_barcode = reader.read(new File(filename)).collect {
 new File("/tmp/seq_count_with_same_umi.csv").withWriter{ out ->
     seq_number_each_barcode.each {out.println it}
 }
+
 println(seq_number_each_barcode)
 def count_map = seq_number_each_barcode.countBy { it}
 println(count_map)
