@@ -12,6 +12,7 @@ repositories {
 // end::repositories[]
 dependencies {
     compile files('libs/algs4.jar')
+    compile 'com.h2database:h2:1.4.195' // H2 database
     compile(group: 'com.shekhargulati', name: 'strman', version: '0.2.0')
     compile(group: 'org.postgresql', name: 'postgresql', version: '42.0.0')
     compile(group: 'org.biojava', name: 'biojava-genome', version: '4.2.0')
