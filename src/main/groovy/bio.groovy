@@ -1,3 +1,4 @@
+import java.nio.file.Paths
 import org.biojava.nbio.core.sequence.DNASequence
 import org.biojava.nbio.sequencing.io.fastq.*
 // Illumina reads will throw error when use IllumiaReader.
@@ -6,9 +7,11 @@ import org.biojava.nbio.sequencing.io.fastq.*
 // returned to the use of the Sanger format (Phred+33).
 FastqReader reader = new SangerFastqReader()
 
-filename = "/home/hwu/dev/MS/UMI/UMI-H_S1_L001/merged/merged_R12.fastq"
-
-reader.read(new File(filename)).take(5).each {
+dirname = "/home/hwu/dev/MS/UMI/UMI-H_S1_L001/merged/"
+filename = Paths.get(dirname, "merged_R12.fastq")
+println(dirname)
+println(filename.toFile())
+reader.read(filename.toFile()).take(5).each {
    // println(it.description.split(/:/)[-1])
      def seq = it.sequence
      if (seq.length() < 10) {
@@ -17,7 +20,7 @@ reader.read(new File(filename)).take(5).each {
 }
 
 
-def seq_number_each_barcode = reader.read(new File(filename)).collect {
+def seq_number_each_barcode = reader.read(filename.toFile()).collect {
      Integer.parseInt(it.description.split(/:/)[-1])
 }
 
@@ -29,7 +32,7 @@ println(seq_number_each_barcode)
 def count_map = seq_number_each_barcode.countBy { it}
 println(count_map)
 
-def length_of_seqs = reader.read(new File(filename)).collect {
+def length_of_seqs = reader.read(filename.toFile()).collect {
     it.sequence.length()
 }
 
@@ -39,8 +42,6 @@ new File("/tmp/seq_len.csv").withWriter{ out ->
 
 def count_map_len = length_of_seqs.countBy { it}
 println(count_map_len)
-
-
 
 
 
